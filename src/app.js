@@ -6,11 +6,29 @@ dotenv.config();
 import './database';
 
 import express from 'express';
+import cors from 'cors';
+import helmet from 'helmet';
+
 import homeRoutes from './routes/home';
 import userRoutes from './routes/user';
 import tokenRoutes from './routes/token';
 import alunoRoutes from './routes/aluno';
 import photoRouter from './routes/photo';
+
+const whiteList = [
+  'https://react.aldairg.com',
+  'http://localhost:3000',
+];
+
+const corsOptions = {
+  origin(origin, callback) {
+    if (whiteList.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+};
 
 class App {
   constructor() {
@@ -20,6 +38,8 @@ class App {
   }
 
   middlewares() {
+    this.app.use(cors(corsOptions));
+    this.app.use(helmet());
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(express.json());
     this.app.use(express.static(resolve(__dirname, '..', 'uploads')));
