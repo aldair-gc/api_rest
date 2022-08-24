@@ -17,8 +17,8 @@ var _aluno = require('./routes/aluno'); var _aluno2 = _interopRequireDefault(_al
 var _photo = require('./routes/photo'); var _photo2 = _interopRequireDefault(_photo);
 
 const whiteList = [
-  'https://react.aldairg.com',
-  'http://localhost:3000',
+  'https://react-aluno.aldairg.com',
+  'http://35.247.225.22',
 ];
 
 const corsOptions = {
