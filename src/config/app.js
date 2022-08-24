@@ -1,3 +1,3 @@
 export default {
-  url: 'https://server-aluno.aldairgc.com',
+  url: process.env.APP_URL,
 };
