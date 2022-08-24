@@ -6,5 +6,6 @@ var _Photo = require('../controllers/Photo'); var _Photo2 = _interopRequireDefau
 const router = new (0, _express.Router)();
 
 router.post('/', _loginRequired2.default, _Photo2.default.store);
+router.delete('/:id', _loginRequired2.default, _Photo2.default.delete);
 
 exports. default = router;
