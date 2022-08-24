@@ -17,8 +17,7 @@ import alunoRoutes from './routes/aluno';
 import photoRouter from './routes/photo';
 
 const whiteList = [
-  'https://react-aluno.aldairg.com',
-  'http://35.247.225.22',
+  'https://react-aluno.aldairgc.com',
 ];
 
 const corsOptions = {
