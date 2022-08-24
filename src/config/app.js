@@ -1,3 +1,3 @@
 export default {
-  url: 'https://aluno.aldairgc.com',
+  url: 'https://server-aluno.aldairgc.com',
 };
