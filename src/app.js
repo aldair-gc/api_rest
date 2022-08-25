@@ -18,6 +18,7 @@ import photoRouter from './routes/photo';
 
 const whiteList = [
   'https://aluno.aldairgc.com',
+  'https://alunoh.aldairgc.com',
 ];
 
 const corsOptions = {
